@@ -1,6 +1,4 @@
 
-// const product = "Chaussettes";
-
 const app = Vue.createApp({
     data: function () {
         return {
@@ -8,8 +6,6 @@ const app = Vue.createApp({
             brand: "VueJS",
             product: "Chaussettes",
             description: "Cette paire est composée de chaussettes Marines et Vertes dépareillées avec un design différent de chaque côté!, sur le pied gauche une feuille. Humour et originalité assurés sur ces chaussettes.",
-            // image: 'assets/images/socks_green.jpg',
-            // inStock: true,
             selectedVariant: 0,
             url: 'https://vuejs.org/',
             inventory: 100,
@@ -30,9 +26,6 @@ const app = Vue.createApp({
         addToCart() {
             this.cart += 1;
         },
-        // updateImage(variantImage) {
-        //     this.image = variantImage;
-        // },
         updateVariant(index) {
             this.selectedVariant = index;
             console.log(index);
@@ -60,6 +53,5 @@ const app = Vue.createApp({
     }
 });
 
-// On va monter notre app dans le DOM
-const mountedApp = app.mount("#app");
+app.mount("#app");
 
